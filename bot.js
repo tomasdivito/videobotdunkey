@@ -21,13 +21,13 @@ line.text = line.text.replace(/&#39;/g, "'")
 // TODO: This whole thing could be better.
 var url = "https://youtu.be/{video}?t={time}s"
 var tweet = line.text + " " + url
-  .replace("{video}", line.video).replace("{time}", Math.ceil(line.time));
+  .replace("{video}", line.video).replace("{time}", Math.floor(line.time));
 
 if (tweet.length > 144) {
   var diff = (tweet.length - 144) + 1;
   line.text = line.text.slice(diff);
   var tweet = line.text + "… " + url
-    .replace("{video}", line.video).replace("{time}", Math.ceil(line.time));
+    .replace("{video}", line.video).replace("{time}", Math.floor(line.time));
 }
 
 Twitter.post("statuses/update", {status: tweet}, function (err, data) {
