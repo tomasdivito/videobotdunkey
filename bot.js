@@ -30,6 +30,6 @@ if (tweet.length > 144) {
     .replace("{video}", line.video).replace("{time}", Math.ceil(line.time));
 }
 
-Twitter.post("statuses/update", {status: tweet}, (err, data) => {
+Twitter.post("statuses/update", {status: tweet}, function (err, data) {
   console.log(data);
 });
