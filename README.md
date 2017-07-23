@@ -1,4 +1,4 @@
 ### VideoBotDunkey
 
-`cp config.json.example config.json`
+`cp config.js.example config.js`
 and set custom twitter api config.

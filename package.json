@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tomasdivito/videobotdunkey/issues"
   },
-  "homepage": "https://github.com/tomasdivito/videobotdunkey#readme"
+  "homepage": "https://github.com/tomasdivito/videobotdunkey#readme",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
 }
