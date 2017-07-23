@@ -24,7 +24,7 @@ var tweet = line.text + " " + url
   .replace("{video}", line.video).replace("{time}", Math.ceil(line.time));
 
 if (tweet.length > 144) {
-  let diff = (tweet.length - 144) + 1;
+  var diff = (tweet.length - 144) + 1;
   line.text = line.text.slice(diff);
   var tweet = line.text + "… " + url
     .replace("{video}", line.video).replace("{time}", Math.ceil(line.time));
