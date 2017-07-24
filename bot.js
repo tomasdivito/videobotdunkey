@@ -12,6 +12,10 @@ var Twitter = new twit(config);
 var rnd = Math.ceil(Math.random() * (lines.length - 1));
 var line = lines[rnd];
 
+// If the line is really short, use the next line too.
+if (line.length < 90) {
+  line += (" \n" + lines[rnd + 1]);
+}
 // Format
 // TODO: Use a damn package for this crap
 line.text = line.text.replace(/&#39;/g, "'")
