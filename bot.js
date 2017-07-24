@@ -16,6 +16,12 @@ var line = lines[rnd];
 if (line.text.length < 90 && lines[rnd + 1].video === line.video) {
   line.text += (" \n" + lines[rnd + 1].text);
 }
+
+// Do it twice, it should be less stupid code.
+if (line.text.length < 90 && lines[rnd + 2].video === line.video) {
+  line.text += (" \n" + lines[rnd + 2].text);
+}
+
 // Format
 // TODO: Use a damn package for this crap
 line.text = line.text.replace(/&#39;/g, "'")
