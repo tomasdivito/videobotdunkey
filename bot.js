@@ -13,8 +13,8 @@ var rnd = Math.ceil(Math.random() * (lines.length - 1));
 var line = lines[rnd];
 
 // If the line is really short, use the next line too.
-if (line.length < 90 && lines[rnd + 1].video === line.video) {
-  line += (" \n" + lines[rnd + 1]);
+if (line.text.length < 90 && lines[rnd + 1].video === line.video) {
+  line.text += (" \n" + lines[rnd + 1].text);
 }
 // Format
 // TODO: Use a damn package for this crap
